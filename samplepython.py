@@ -7,6 +7,7 @@ external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
+
 df = pd.read_csv(
     'https://gist.githubusercontent.com/chriddyp/' +
     '5d1ea79569ed194d432e56108a04d188/raw/' +
