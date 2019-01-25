@@ -4,7 +4,6 @@ import decimal
 import matplotlib as plt
 
 dict = {}
-
 for i in range(1,10):
     dict[i]=i*i
 
@@ -20,6 +19,10 @@ for i in range(1,10):
     lista.append(i)
 
 lista
+
+
+
+
 
 def normal_pdf(x, mu=0, sigma=1):
  sqrt_two_pi = math.sqrt(2 * math.pi)
