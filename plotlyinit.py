@@ -9,7 +9,7 @@ with open("credentials.json") as f:
     credential = json.load(f)
 
 plotly.tools.set_credentials_file(
-    username=credential["username"], api_key=credential["api_key"]
+    username=credential["plotly_username"], api_key=credential["plotly_api_key"]
 )
 
 labels = ["Oxygen", "Hydrogen", "Carbon_Dioxide", "Nitrogen"]
