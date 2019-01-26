@@ -1,11 +1,20 @@
 import plotly.plotly as py
 import plotly.graph_objs as go
+import json
+import plotly
 
-plotly.tools.set_credentials_file(username='harsh.pandey77', api_key='2uwVTl4P0XRo5ZEX93Jh')
+from pprint import pprint
 
-labels = ['Oxygen','Hydrogen','Carbon_Dioxide','Nitrogen']
-values = [4500,2500,1053,500]
+with open("credentials.json") as f:
+    credential = json.load(f)
+
+plotly.tools.set_credentials_file(
+    username=credential["username"], api_key=credential["api_key"]
+)
+
+labels = ["Oxygen", "Hydrogen", "Carbon_Dioxide", "Nitrogen"]
+values = [4500, 2500, 1053, 500]
 
 trace = go.Pie(labels=labels, values=values)
 
-py.iplot([trace], filename='basic_pie_chart')
+py.iplot([trace], filename="basic_pie_chart")
